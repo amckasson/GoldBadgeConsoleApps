@@ -24,6 +24,16 @@ namespace KomodoCafe_Repository
 
 
         //Helper Method
-        private MenuItems GetItemsByName(string )
+        private MenuItems GetItemsByName(string itemName)
+        {
+            foreach (MenuItems item in _menuInfo)
+            {
+                if (item.MealName == itemName)
+                {
+                    return item;
+                }
+            }
+            return null;
+        }
     }
 }
