@@ -1,0 +1,6 @@
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoCafe_Repository\bin\Debug\KomodoCafe_Repository.dll
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoCafe_Repository\bin\Debug\KomodoCafe_Repository.pdb
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoCafe_Repository\obj\Debug\KomodoCafe_Repository.csprojAssemblyReference.cache
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoCafe_Repository\obj\Debug\KomodoCafe_Repository.csproj.CoreCompileInputs.cache
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoCafe_Repository\obj\Debug\KomodoCafe_Repository.dll
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoCafe_Repository\obj\Debug\KomodoCafe_Repository.pdb
