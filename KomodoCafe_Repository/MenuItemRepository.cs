@@ -20,11 +20,50 @@ namespace KomodoCafe_Repository
             return _menuInfo;
         }
 
+        public bool UpdateExistingMenuItem(string originalItem, MenuItems newItem)
+        {
+            MenuItems oldItem = GetItemsByName(originalItem);
 
+            if(oldItem != null)
+            {
+                oldItem.MealName = newItem.MealName;
+                oldItem.MealDescription = newItem.MealName;
+                oldItem.MealNumber = newItem.MealNumber;
+                oldItem.ListOfIngredients = newItem.ListOfIngredients;
+                oldItem.Price = newItem.Price;
 
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool RemoveMenuItemFromList(string itemName)
+        {
+            MenuItems item = GetItemsByName(itemName);
+
+            if(item == null)
+            {
+                return false;
+            }
+
+            int initialCount = _menuInfo.Count;
+            _menuInfo.Remove(item);
+
+            if(initialCount > _menuInfo.Count)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         //Helper Method
-        private MenuItems GetItemsByName(string itemName)
+        public MenuItems GetItemsByName(string itemName)
         {
             foreach (MenuItems item in _menuInfo)
             {
