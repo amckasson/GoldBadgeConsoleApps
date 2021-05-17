@@ -125,16 +125,64 @@ namespace KomodoCafe_Console
                     $"Ingredients: {item.ListOfIngredients}\n" +
                     $"Price: {item.Price}");
             }
+            else
+            {
+                Console.WriteLine("No Menu Items with that Name.");
+            }
         }
 
         private void UpdateExistingItem()
         {
+            DisplayAllMenuItems();
+            Console.WriteLine("Enter the Menu Item you would like to Update.");
+            string oldItem = Console.ReadLine();
+
+            MenuItems newItem = new MenuItems();
+
+            Console.WriteLine("Enter the Meal Number.");
+            string numberAsString = Console.ReadLine();
+            newItem.MealNumber = int.Parse(numberAsString);
+
+            Console.WriteLine("Enter the Meal Name.");
+            newItem.MealName = Console.ReadLine();
+
+            Console.WriteLine("Enter the Meal Description.");
+            newItem.MealDescription = Console.ReadLine();
+
+            Console.WriteLine("Enter the List of Ingredients.");
+            newItem.MealDescription = Console.ReadLine();
+
+            Console.WriteLine("Enter the Price for the Meal.");
+            string priceAsString = Console.ReadLine();
+            newItem.Price = decimal.Parse(priceAsString);
+
+            bool wasUpdated = _itemRepo.UpdateExistingMenuItem(oldItem, newItem);
+
+            if (wasUpdated)
+            {
+                Console.WriteLine("Menu Item was updated.");
+            }
+            else
+            {
+                Console.WriteLine("Could not Update Menu Item.");
+            }
 
         }
 
         private void DeleteExistingItem()
         {
-
+            DisplayAllMenuItems();
+            Console.WriteLine("\nEnter the Name of the Item you would like to Remove.");
+            string input = Console.ReadLine();
+            bool wasDeleted = _itemRepo.RemoveMenuItemFromList(input);
+            if (wasDeleted)
+            {
+                Console.WriteLine("The Menu Item was Deleted");
+            }
+            else
+            {
+                Console.WriteLine("The Menu Item could not be Deleted.");
+            }
         }
 
         private void SeedMenuList()
