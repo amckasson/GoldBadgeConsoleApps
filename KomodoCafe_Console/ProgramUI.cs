@@ -9,8 +9,10 @@ namespace KomodoCafe_Console
 {
     class ProgramUI
     {
+        private MenuItemRepository _itemRepo = new MenuItemRepository();
         public void Run()
         {
+            SeedMenuList();
             Menu();
         }
 
@@ -71,6 +73,7 @@ namespace KomodoCafe_Console
 
         private void CreateNewMenuItem()
         {
+            Console.Clear();
             MenuItems newItem = new MenuItems();
 
             Console.WriteLine("Enter the Meal Number.");
@@ -89,16 +92,39 @@ namespace KomodoCafe_Console
             Console.WriteLine("Enter the Price for the Meal.");
             string priceAsString = Console.ReadLine();
             newItem.Price = decimal.Parse(priceAsString);
+
+            _itemRepo.AddItemToList(newItem);
         }
 
         private void DisplayAllMenuItems()
         {
+            Console.Clear();
+            List<MenuItems> listOfMenuItems = _itemRepo.GetMenuList();
 
+            foreach(MenuItems item in listOfMenuItems)
+            {
+                Console.WriteLine($"Meal Number: {item.MealNumber}\n" +
+                    $"Meal: {item.MealName}\n" +
+                    $"Meal Description: {item.MealDescription}\n" +
+                    $"Ingredients: {item.ListOfIngredients}\n" +
+                    $"Price: {item.Price}");
+            }
         }
 
         private void DisplayItemByName()
         {
-
+            Console.Clear();
+            Console.WriteLine("Enter the Name of the Menu Item.");
+            string itemName = Console.ReadLine();
+            MenuItems item = _itemRepo.GetItemsByName(itemName);
+            if(item != null)
+            {
+                Console.WriteLine($"Meal Number: {item.MealNumber}\n" +
+                    $"Meal: {item.MealName}\n" +
+                    $"Meal Description: {item.MealDescription}\n" +
+                    $"Ingredients: {item.ListOfIngredients}\n" +
+                    $"Price: {item.Price}");
+            }
         }
 
         private void UpdateExistingItem()
@@ -109,6 +135,17 @@ namespace KomodoCafe_Console
         private void DeleteExistingItem()
         {
 
+        }
+
+        private void SeedMenuList()
+        {
+            MenuItems burger = new MenuItems(1, "Classic Burger", "Classic Burger with toasted bun and full garden", "Bun, Beef Patty, Lettuce, tomato, pickle, onion", 6.5m);
+            MenuItems cheeseBurger = new MenuItems(2, "Cheeseburger", "Cheeseburger with toasted bun and full garden", "Bun, Choice of cheese, Beef Patty, Lettuce, tomato, pickle, onion", 7.5m);
+            MenuItems hotWings = new MenuItems(3, "Hot Wings", "House Wings served over a plate of fries", "Chicken, House Buffulo Sauce, French Fries", 10);
+
+            _itemRepo.AddItemToList(burger);
+            _itemRepo.AddItemToList(cheeseBurger);
+            _itemRepo.AddItemToList(hotWings);
         }
     }
 }
