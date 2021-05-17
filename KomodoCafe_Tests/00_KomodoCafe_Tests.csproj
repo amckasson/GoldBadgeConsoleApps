@@ -57,9 +57,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KomodoCafe_Repository\KomodoCafe_Repository.csproj">
+    <ProjectReference Include="..\KomodoCafe_Repository\00_KomodoCafe_Repository.csproj">
       <Project>{4FCF9788-8637-4D42-BDD0-1DE254E551A7}</Project>
-      <Name>KomodoCafe_Repository</Name>
+      <Name>00_KomodoCafe_Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
