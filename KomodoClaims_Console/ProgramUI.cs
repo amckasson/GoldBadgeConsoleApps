@@ -27,7 +27,8 @@ namespace KomodoClaims_Console
                     "1. See all claims.\n" +
                     "2. Take care of next claim.\n" +
                     "3. Enter new claim.\n" +
-                    "4. Exit.");
+                    "4. Update claim.\n" +
+                    "5. Exit.");
 
                 string input = Console.ReadLine();
 
@@ -47,6 +48,10 @@ namespace KomodoClaims_Console
                         break;
                     case "4":
                     case "four":
+                        UpdateClaim();
+                        break;
+                    case "5":
+                    case "five":
                         Console.WriteLine("Have a great day!");
                         keepRunning = false;
                         break;
@@ -78,7 +83,32 @@ namespace KomodoClaims_Console
         }
         private void DequeueClaim()
         {
+            Console.Clear();
+            //Queue<KomodoClaims> queueOfClaims = _claimRepo.GetClaimsQueue();
+            //queueOfClaims.Peek;
+            //_claimRepo.RemoveClaimQueue();
 
+            Queue<KomodoClaims> queue = new Queue<KomodoClaims>();
+            queue.Peek();
+            Console.WriteLine("Would you like to handle this claim?\n" +
+                "1. Yes.\n" +
+                "2. No.");
+            string input = Console.ReadLine();
+            switch (input)
+            {
+                case "1":
+                case "one":
+                    _claimRepo.RemoveClaimQueue();
+                    break;
+                case "2":
+                case "two":
+                    Menu();
+                    break;
+                default:
+                    Console.WriteLine("Enter a valid number");
+                    break;
+            }
+            
         }
         private void EnqueueClaim()
         {
@@ -148,13 +178,18 @@ namespace KomodoClaims_Console
             _claimRepo.AddClaimToQueue(newClaim);
         }
 
+        private void UpdateClaim()
+        {
+
+        }
+
         private void SeedClaimQueue()
         {
-            KomodoClaims claimOne = new KomodoClaims(1, ClaimType.Car, "Car Crash", 5000m, DateTime.Today, DateTime.Now, false);
+            KomodoClaims claimOne = new KomodoClaims(1, ClaimType.Car, "Car Crash", 5000m, DateTime.Today, DateTime.Now, true);
             
-            KomodoClaims claimTwo = new KomodoClaims(2, ClaimType.Home, "Fire", 50000m, DateTime.Today, DateTime.Now, false);
+            KomodoClaims claimTwo = new KomodoClaims(2, ClaimType.Home, "Fire", 50000m, DateTime.Today, DateTime.Now, true);
             
-            KomodoClaims claimThree = new KomodoClaims(3, ClaimType.Theft, "Car stolen", 5000m, DateTime.Today, DateTime.Now, false);
+            KomodoClaims claimThree = new KomodoClaims(3, ClaimType.Theft, "Car stolen", 5000m, DateTime.Today, DateTime.Now, true);
 
             _claimRepo.AddClaimToQueue(claimOne);
             _claimRepo.AddClaimToQueue(claimTwo);

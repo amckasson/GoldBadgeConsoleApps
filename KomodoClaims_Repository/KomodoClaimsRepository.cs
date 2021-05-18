@@ -20,40 +20,33 @@ namespace KomodoClaims_Repository
             return _queueOfClaims;
         }
 
+        public bool UpdateExistingClaim(int originalClaim, KomodoClaims newClaim)
+        {
+            KomodoClaims oldClaim = GetClaimByID(originalClaim);
+
+            if (oldClaim != null)
+            {
+                oldClaim.ClaimID = newClaim.ClaimID;
+                oldClaim.TypeOfClaim = newClaim.TypeOfClaim;
+                oldClaim.Description = newClaim.Description;
+                oldClaim.ClaimAmount = newClaim.ClaimAmount;
+                oldClaim.DateOfIncident = newClaim.DateOfIncident;
+                oldClaim.DateOfClaim = newClaim.DateOfClaim;
+                oldClaim.IsValid = newClaim.IsValid;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public void RemoveClaimQueue()
         {
             _queueOfClaims.Dequeue();
         }
-
-        //Below are failed tests that dont work
-
-        //public Queue<KomodoClaims> RemoveClaimFromQueue()
-        //{
-        //    _queueOfClaims.Dequeue();
-        //    return _queueOfClaims;
-        //}
-
-        //public void RemoveClaimFromQueue(KomodoClaims claim)
-        //{
-        //    _queueOfClaims.Dequeue();
-        //    _queueOfClaims.Count > 0
-        //}
-
-        //public bool RemoveClaimFromQueue(int iD)
-        //{
-        //    KomodoClaims claim = GetClaimByID(iD);
-
-        //    if (claim == null)
-        //    {
-        //        return false;
-        //    }
-        //    int initialCount = _queueOfClaims.Count;
-        //    _queueOfClaims.Dequeue(claim);
-        //}
-
-
-        //Helper may not be needed
-
+        
+        //Helper
         public KomodoClaims GetClaimByID(int iD)
         {
             foreach (KomodoClaims claim in _queueOfClaims)
