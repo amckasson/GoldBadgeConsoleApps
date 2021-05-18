@@ -1,0 +1,16 @@
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Tests\bin\Debug\KomodoClaims_Tests.dll
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Tests\bin\Debug\KomodoClaims_Tests.pdb
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Tests\bin\Debug\KomodoClaims_Repository.dll
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Tests\bin\Debug\KomodoClaims_Repository.pdb
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Tests\obj\Debug\01_KomodoClaims_Tests.csprojAssemblyReference.cache
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Tests\obj\Debug\01_KomodoClaims_Tests.csproj.CoreCompileInputs.cache
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Tests\obj\Debug\01_KomodoClaims_Tests.csproj.CopyComplete
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Tests\obj\Debug\KomodoClaims_Tests.dll
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Tests\obj\Debug\KomodoClaims_Tests.pdb

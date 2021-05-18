@@ -20,23 +20,45 @@ namespace KomodoClaims_Repository
             return _queueOfClaims;
         }
 
-        public bool RemoveClaimFromQueue(int iD)
+        public void RemoveClaimQueue()
         {
-            KomodoClaims claim = GetClaimByID(iD);
-
-            if (claim == null)
-            {
-                return false;
-            }
-            int initialCount = _queueOfClaims.Count;
-            _queueOfClaims.Dequeue(claim);
+            _queueOfClaims.Dequeue();
         }
 
-        private KomodoClaims GetClaimByID(int iD)
+        //Below are failed tests that dont work
+
+        //public Queue<KomodoClaims> RemoveClaimFromQueue()
+        //{
+        //    _queueOfClaims.Dequeue();
+        //    return _queueOfClaims;
+        //}
+
+        //public void RemoveClaimFromQueue(KomodoClaims claim)
+        //{
+        //    _queueOfClaims.Dequeue();
+        //    _queueOfClaims.Count > 0
+        //}
+
+        //public bool RemoveClaimFromQueue(int iD)
+        //{
+        //    KomodoClaims claim = GetClaimByID(iD);
+
+        //    if (claim == null)
+        //    {
+        //        return false;
+        //    }
+        //    int initialCount = _queueOfClaims.Count;
+        //    _queueOfClaims.Dequeue(claim);
+        //}
+
+
+        //Helper may not be needed
+
+        public KomodoClaims GetClaimByID(int iD)
         {
-            foreach(KomodoClaims claim in _queueOfClaims)
+            foreach (KomodoClaims claim in _queueOfClaims)
             {
-                if(claim.ClaimID == iD)
+                if (claim.ClaimID == iD)
                 {
                     return claim;
                 }
