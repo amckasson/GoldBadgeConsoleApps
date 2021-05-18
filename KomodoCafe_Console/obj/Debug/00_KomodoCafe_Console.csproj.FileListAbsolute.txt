@@ -1,0 +1,10 @@
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoCafe_Console\bin\Debug\KomodoCafe_Console.exe.config
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoCafe_Console\bin\Debug\KomodoCafe_Console.exe
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoCafe_Console\bin\Debug\KomodoCafe_Console.pdb
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoCafe_Console\bin\Debug\KomodoCafe_Repository.dll
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoCafe_Console\bin\Debug\KomodoCafe_Repository.pdb
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoCafe_Console\obj\Debug\00_KomodoCafe_Console.csprojAssemblyReference.cache
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoCafe_Console\obj\Debug\00_KomodoCafe_Console.csproj.CoreCompileInputs.cache
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoCafe_Console\obj\Debug\00_KomodoCafe_Console.csproj.CopyComplete
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoCafe_Console\obj\Debug\KomodoCafe_Console.exe
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoCafe_Console\obj\Debug\KomodoCafe_Console.pdb
