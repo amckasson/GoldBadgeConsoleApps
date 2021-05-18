@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KomodoClaims_Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace KomodoClaims_Console
 {
     class ProgramUI
     {
+        private KomodoClaimsRepository _claimRepo = new KomodoClaimsRepository();
         public void Run()
         {
             Menu();
@@ -59,7 +61,49 @@ namespace KomodoClaims_Console
 
         private void DisplayAllClaims()
         {
+            KomodoClaims newClaim = new KomodoClaims();
 
+            Console.WriteLine("Enter the claim ID number.");
+            string CliamIDAsString = Console.ReadLine();
+            newClaim.ClaimID = int.Parse(CliamIDAsString);
+
+            Console.WriteLine("Enter the claim type:\n" +
+                "1. Car\n" +
+                "2. Home\n" +
+                "3. Theft");
+
+            string claimTypeAsString = Console.ReadLine();
+            int claimTypeAsInt = int.Parse(claimTypeAsString);
+            newClaim.TypeOfClaim = (ClaimType)claimTypeAsInt;
+
+            Console.WriteLine("Enter a description of the claim.");
+            newClaim.Description = Console.ReadLine();
+
+            Console.WriteLine("Enter the amount for the claim.");
+            string claimAmountAsString = Console.ReadLine();
+            newClaim.ClaimAmount = decimal.Parse(claimAmountAsString);
+
+            //Not sure if next two methods will work below
+            Console.WriteLine("Enter the date of the incident MM/DD/YYYY");
+            DateTime incidentDate = DateTime.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the date of the claim MM/DD/YYYY");
+            DateTime claimDate = DateTime.Parse(Console.ReadLine());
+            //Not sure if two methods above will work
+
+            Console.WriteLine("Is this claim valid? Was it made within 30 days of the incident? (y/n)");
+            string isValidAsString = Console.ReadLine().ToLower();
+
+            if(isValidAsString == "y")
+            {
+                newClaim.IsValid = true;
+            }
+            else
+            {
+                newClaim.IsValid = false;
+            }
+
+            _claimRepo.AddClaimToQueue(newClaim);
         }
         private void DequeueClaim()
         {
