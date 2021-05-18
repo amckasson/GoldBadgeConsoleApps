@@ -194,6 +194,9 @@ namespace KomodoClaims_Console
             _claimRepo.AddClaimToQueue(claimOne);
             _claimRepo.AddClaimToQueue(claimTwo);
             _claimRepo.AddClaimToQueue(claimThree);
+
+
+            ////Testing Commits
         }
     }
 }
