@@ -12,6 +12,7 @@ namespace KomodoClaims_Console
         private KomodoClaimsRepository _claimRepo = new KomodoClaimsRepository();
         public void Run()
         {
+            SeedClaimQueue();
             Menu();
         }
 
@@ -61,6 +62,26 @@ namespace KomodoClaims_Console
 
         private void DisplayAllClaims()
         {
+            Console.Clear();
+            Queue<KomodoClaims> queueOfClaims = _claimRepo.GetClaimsQueue();
+
+            foreach(KomodoClaims claim in queueOfClaims)
+            {
+                Console.WriteLine($"Claim ID: {claim.ClaimID}\n" +
+               $"Claim Type: {claim.TypeOfClaim}\n" +
+               $"Claim Description: {claim.Description}\n" +
+               $"Claim Amount: {claim.ClaimAmount}\n" +
+               $"Date of Incedent: {claim.DateOfIncident.ToShortDateString()}\n" +
+               $"Date of Claim: {claim.DateOfClaim.ToShortDateString()}\n" +
+               $"Is Valid: {claim.IsValid}\n\n");
+            }
+        }
+        private void DequeueClaim()
+        {
+
+        }
+        private void EnqueueClaim()
+        {
             KomodoClaims newClaim = new KomodoClaims();
 
             Console.WriteLine("Enter the claim ID number.");
@@ -84,17 +105,38 @@ namespace KomodoClaims_Console
             newClaim.ClaimAmount = decimal.Parse(claimAmountAsString);
 
             //Not sure if next two methods will work below
-            Console.WriteLine("Enter the date of the incident MM/DD/YYYY");
-            DateTime incidentDate = DateTime.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter the date of the claim MM/DD/YYYY");
-            DateTime claimDate = DateTime.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the date of the incident MM/DD/YYYY");
+            //DateTime incidentDate = DateTime.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Enter the date of the claim MM/DD/YYYY");
+            //DateTime claimDate = DateTime.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the date of the incident. MM/DD/YYYY");
+            DateTime incidentDate = Convert.ToDateTime(Console.ReadLine());
+            newClaim.DateOfIncident = incidentDate;
+
+            Console.WriteLine("Enter the date of the claim. MM/DD/YYYY");
+            DateTime claimDate = Convert.ToDateTime(Console.ReadLine());
+            newClaim.DateOfClaim = claimDate;
+
             //Not sure if two methods above will work
 
-            Console.WriteLine("Is this claim valid? Was it made within 30 days of the incident? (y/n)");
-            string isValidAsString = Console.ReadLine().ToLower();
+            //Console.WriteLine("Is this claim valid? Was it made within 30 days of the incident? (y/n)");
+            //string isValidAsString = Console.ReadLine().ToLower();
 
-            if(isValidAsString == "y")
+            //if (isValidAsString == "y")
+            //{
+            //    newClaim.IsValid = true;
+            //}
+            //else
+            //{
+            //    newClaim.IsValid = false;
+            //}
+
+            TimeSpan isItValid = claimDate - incidentDate;
+            double totalDays = isItValid.TotalDays;
+            if (totalDays <= 30)
             {
                 newClaim.IsValid = true;
             }
@@ -105,13 +147,18 @@ namespace KomodoClaims_Console
 
             _claimRepo.AddClaimToQueue(newClaim);
         }
-        private void DequeueClaim()
-        {
 
-        }
-        private void EnqueueClaim()
+        private void SeedClaimQueue()
         {
+            KomodoClaims claimOne = new KomodoClaims(1, ClaimType.Car, "Car Crash", 5000m, DateTime.Today, DateTime.Now, false);
+            
+            KomodoClaims claimTwo = new KomodoClaims(2, ClaimType.Home, "Fire", 50000m, DateTime.Today, DateTime.Now, false);
+            
+            KomodoClaims claimThree = new KomodoClaims(3, ClaimType.Theft, "Car stolen", 5000m, DateTime.Today, DateTime.Now, false);
 
+            _claimRepo.AddClaimToQueue(claimOne);
+            _claimRepo.AddClaimToQueue(claimTwo);
+            _claimRepo.AddClaimToQueue(claimThree);
         }
     }
 }
