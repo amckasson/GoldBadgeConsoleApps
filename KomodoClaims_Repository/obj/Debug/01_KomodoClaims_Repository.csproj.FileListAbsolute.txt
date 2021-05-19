@@ -4,3 +4,9 @@ C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConso
 C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Repository\obj\Debug\01_KomodoClaims_Repository.csproj.CoreCompileInputs.cache
 C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Repository\obj\Debug\KomodoClaims_Repository.dll
 C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Repository\obj\Debug\KomodoClaims_Repository.pdb
+C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Repository\bin\Debug\KomodoClaims_Repository.dll
+C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Repository\bin\Debug\KomodoClaims_Repository.pdb
+C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Repository\obj\Debug\01_KomodoClaims_Repository.csprojAssemblyReference.cache
+C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Repository\obj\Debug\01_KomodoClaims_Repository.csproj.CoreCompileInputs.cache
+C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Repository\obj\Debug\KomodoClaims_Repository.dll
+C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Repository\obj\Debug\KomodoClaims_Repository.pdb

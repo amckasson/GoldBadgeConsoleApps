@@ -88,9 +88,23 @@ namespace KomodoClaims_Console
             //queueOfClaims.Peek;
             //_claimRepo.RemoveClaimQueue();
 
-            Queue<KomodoClaims> queue = new Queue<KomodoClaims>();
-            queue.Peek();
-            Console.WriteLine("Would you like to handle this claim?\n" +
+            //Queue<KomodoClaims> queue = new Queue<KomodoClaims>();
+            //queue.Peek();
+            //Queue<KomodoClaims> queueOfClaims = _claimRepo.GetClaimsQueue();
+             Queue<KomodoClaims> queueOfClaims = _claimRepo.GetClaimsQueue();
+
+            foreach(KomodoClaims claim in queueOfClaims)
+            {
+                Console.WriteLine($"Claim ID: {claim.ClaimID}\n" +
+               $"Claim Type: {claim.TypeOfClaim}\n" +
+               $"Claim Description: {claim.Description}\n" +
+               $"Claim Amount: {claim.ClaimAmount}\n" +
+               $"Date of Incedent: {claim.DateOfIncident.ToShortDateString()}\n" +
+               $"Date of Claim: {claim.DateOfClaim.ToShortDateString()}\n" +
+               $"Is Valid: {claim.IsValid}\n\n");
+            }
+           // Console.WriteLine(queueOfClaims.Peek());
+            Console.WriteLine("Would you like to handle the top/first claim?\n" +
                 "1. Yes.\n" +
                 "2. No.");
             string input = Console.ReadLine();
@@ -102,6 +116,7 @@ namespace KomodoClaims_Console
                     break;
                 case "2":
                 case "two":
+                    Console.Clear();
                     Menu();
                     break;
                 default:
@@ -134,14 +149,6 @@ namespace KomodoClaims_Console
             string claimAmountAsString = Console.ReadLine();
             newClaim.ClaimAmount = decimal.Parse(claimAmountAsString);
 
-            //Not sure if next two methods will work below
-
-            //Console.WriteLine("Enter the date of the incident MM/DD/YYYY");
-            //DateTime incidentDate = DateTime.Parse(Console.ReadLine());
-
-            //Console.WriteLine("Enter the date of the claim MM/DD/YYYY");
-            //DateTime claimDate = DateTime.Parse(Console.ReadLine());
-
             Console.WriteLine("Enter the date of the incident. MM/DD/YYYY");
             DateTime incidentDate = Convert.ToDateTime(Console.ReadLine());
             newClaim.DateOfIncident = incidentDate;
@@ -149,20 +156,6 @@ namespace KomodoClaims_Console
             Console.WriteLine("Enter the date of the claim. MM/DD/YYYY");
             DateTime claimDate = Convert.ToDateTime(Console.ReadLine());
             newClaim.DateOfClaim = claimDate;
-
-            //Not sure if two methods above will work
-
-            //Console.WriteLine("Is this claim valid? Was it made within 30 days of the incident? (y/n)");
-            //string isValidAsString = Console.ReadLine().ToLower();
-
-            //if (isValidAsString == "y")
-            //{
-            //    newClaim.IsValid = true;
-            //}
-            //else
-            //{
-            //    newClaim.IsValid = false;
-            //}
 
             TimeSpan isItValid = claimDate - incidentDate;
             double totalDays = isItValid.TotalDays;
@@ -180,6 +173,8 @@ namespace KomodoClaims_Console
 
         private void UpdateClaim()
         {
+            _claimRepo.GetClaimsQueue();
+
 
         }
 

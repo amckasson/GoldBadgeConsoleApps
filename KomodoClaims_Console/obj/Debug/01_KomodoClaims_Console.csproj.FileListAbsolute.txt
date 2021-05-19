@@ -8,3 +8,13 @@ C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConso
 C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Console\bin\Debug\KomodoClaims_Repository.dll
 C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Console\bin\Debug\KomodoClaims_Repository.pdb
 C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Console\obj\Debug\01_KomodoClaims_Console.csproj.CopyComplete
+C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Console\bin\Debug\KomodoClaims_Console.exe.config
+C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Console\bin\Debug\KomodoClaims_Console.exe
+C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Console\bin\Debug\KomodoClaims_Console.pdb
+C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Console\bin\Debug\KomodoClaims_Repository.dll
+C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Console\bin\Debug\KomodoClaims_Repository.pdb
+C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Console\obj\Debug\01_KomodoClaims_Console.csprojAssemblyReference.cache
+C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Console\obj\Debug\01_KomodoClaims_Console.csproj.CoreCompileInputs.cache
+C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Console\obj\Debug\01_KomodoClaims_Console.csproj.CopyComplete
+C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Console\obj\Debug\KomodoClaims_Console.exe
+C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\KomodoClaims_Console\obj\Debug\KomodoClaims_Console.pdb
