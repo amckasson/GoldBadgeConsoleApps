@@ -98,7 +98,6 @@ namespace _02_KomodoBadges_Console
         {
             KomodoBadges badges = new KomodoBadges();
             badges.ListOfDoors = new List<string>();
-            //badges.BadgeID = new int();
             Console.Clear();
             Console.WriteLine("Enter the badge ID number that you want to update: ");
             badges.BadgeID = int.Parse(Console.ReadLine());

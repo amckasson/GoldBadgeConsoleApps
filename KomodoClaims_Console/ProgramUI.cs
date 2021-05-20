@@ -174,6 +174,9 @@ namespace KomodoClaims_Console
         private void UpdateClaim()
         {
             _claimRepo.GetClaimsQueue();
+            Console.WriteLine("Not fully functioning");
+            Console.ReadLine();
+            Menu();
 
 
         }

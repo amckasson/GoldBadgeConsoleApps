@@ -1,6 +1,7 @@
 ﻿using _02_KomodoBadges_Repository;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 
 namespace _02_KomodoBadges_Tests
 {
@@ -29,13 +30,14 @@ namespace _02_KomodoBadges_Tests
             
         }
 
-       // private KomodoBadges _badge;
-       // private KomodoBadgesRepository _repo;
+        private KomodoBadges _badge;
+        private KomodoBadgesRepository _repo;
 
         [TestInitialize]
         public void Arrange()
         {
-            
+            _repo = new KomodoBadgesRepository();
+            //_badge = new KomodoBadges(123, "23");
         }
     }
 }
