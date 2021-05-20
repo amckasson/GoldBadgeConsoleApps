@@ -65,7 +65,7 @@ namespace _02_KomodoBadges_Console
             newBadge.BadgeID = int.Parse(badgeIDAsString);
 
             Console.WriteLine("List a door that it needs access to: ");
-            newBadge.ListOfDoors = Console.ReadLine();
+            newBadge.ListOfDoors = Convert.ToString(Console.ReadLine());
             Console.WriteLine("Any other doors (y/n)?");
             string ifYes = (Console.ReadLine());
             while (ifYes == "y")
@@ -85,20 +85,19 @@ namespace _02_KomodoBadges_Console
 
         private void UpdateBadge()
         {
-
+            //Dictionary<int, string> badgeInDictionary = _badgeRepo.GetBadges();
         }
 
         private void ListAllBadges()
         {
             Console.Clear();
-            Dictionary<int, string> badgeDictionary = _badgeRepo.GetBadges();
-           foreach (KomodoBadges badge in badgeDictionary)
+            Dictionary<int, KomodoBadges> badgeDictionary = _badgeRepo.GetBadges();
+            foreach (KeyValuePair<int, KomodoBadges> entry in badgeDictionary)
             {
-                Console.WriteLine($"Badge ID: {badge.BadgeID}\n" +
-                    $"Doors Allowed: {badge.ListOfDoors}");
+                Console.WriteLine(entry.Key + ":" + entry.Value);
             }
 
-            
+
         }
     }
 }
