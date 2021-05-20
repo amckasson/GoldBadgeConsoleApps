@@ -8,26 +8,57 @@ namespace _02_KomodoBadges_Repository
 {
     public class KomodoBadgesRepository
     {
-        private Dictionary<int, KomodoBadges> _KomodoBadges = new Dictionary<int, KomodoBadges>();
+        private Dictionary<int, List<string>> _KomodoBadges = new Dictionary<int, List<string>>();
 
         //Create
-        public void AddBadgeToDictionary(int badgeID, KomodoBadges doorAccess)
+        public bool AddBadgeToDictionary(int badgeID, List<string> doorAccess)
         {
+            //Dictionary<int, List<string>> oldList = _KomodoBadges;
             _KomodoBadges.Add(badgeID, doorAccess);
+            return _KomodoBadges.ContainsKey(badgeID);
         }
 
         //Read
-        public Dictionary<int, KomodoBadges> GetBadges()
+        public Dictionary<int, List<string>> GetBadges()
         {
             return _KomodoBadges;
         }
 
         //Update
-        public bool UpdateExistingBadge(int originalID, KomodoBadges doorList)
+        public bool AddDoorToBadge(int originalID, string doorAdd)
         {
-            KomodoBadges oldBadge = GetBadges(originalBadge);
-            _KomodoBadges.
+            KomodoBadges oldBadge = GetBadgeByID(originalID);
+            if (oldBadge.ListOfDoors.Contains(doorAdd))
+            {
+                return false;
+            }
+            else
+            {
+                oldBadge.ListOfDoors.Add(doorAdd);
+                _KomodoBadges[originalID] = oldBadge.ListOfDoors;
+                return true;
+            }
         }
 
+        public bool RemoveDoorFromBadge(int originalID, string doorRemove)
+        {
+            KomodoBadges oldBadge = GetBadgeByID(originalID);
+            if (oldBadge.ListOfDoors.Contains(doorRemove))
+            {
+                oldBadge.ListOfDoors.Remove(doorRemove);
+                _KomodoBadges[originalID] = oldBadge.ListOfDoors;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        public KomodoBadges GetBadgeByID(int badgeID)
+        {
+            return new KomodoBadges(badgeID, _KomodoBadges[badgeID]);
+        }
     }
 }

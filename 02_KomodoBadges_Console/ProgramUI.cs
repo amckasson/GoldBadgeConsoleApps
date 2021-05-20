@@ -81,6 +81,7 @@ namespace _02_KomodoBadges_Console
                     Menu();
                 }
             }
+
             bool wasAddedCorrectly = _badgeRepo.AddBadgeToDictionary(newBadge.BadgeID, newBadge.ListOfDoors);
             if (wasAddedCorrectly)
             {
@@ -104,8 +105,8 @@ namespace _02_KomodoBadges_Console
         private void ListAllBadges()
         {
             Console.Clear();
-            Dictionary<int, KomodoBadges> badgeDictionary = _badgeRepo.GetBadges();
-            foreach (KeyValuePair<int, KomodoBadges> entry in badgeDictionary)
+            Dictionary<int, List<string>> badgeDictionary = _badgeRepo.GetBadges();
+            foreach (KeyValuePair<int, List<string>> entry in badgeDictionary)
             {
                 Console.WriteLine(entry.Key + ":" + entry.Value);
             }
