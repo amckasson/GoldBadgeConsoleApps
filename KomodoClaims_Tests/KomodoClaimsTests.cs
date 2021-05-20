@@ -43,7 +43,9 @@ namespace KomodoClaims_Tests
         [TestMethod]
         public void Dequeue()
         {
-            _repo.RemoveClaimQueue();
+           _repo.RemoveClaimQueue();
+
+            //Assert.IsTrue(wasDeleted);
         }
     }
 }

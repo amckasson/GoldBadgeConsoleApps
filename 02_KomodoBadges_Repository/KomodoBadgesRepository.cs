@@ -32,7 +32,7 @@ namespace _02_KomodoBadges_Repository
 
         public void UpdateExistingBadge(int originalID, string doorList)
         {
-            KomodoBadges oldBadge = GetBadges(int , string)
+            KomodoBadges oldBadge = 
         }
 
 

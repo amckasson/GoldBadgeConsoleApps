@@ -87,7 +87,7 @@ namespace KomodoCafe_Console
             newItem.MealDescription = Console.ReadLine();
 
             Console.WriteLine("Enter the List of Ingredients.");
-            newItem.MealDescription = Console.ReadLine();
+            newItem.ListOfIngredients = Console.ReadLine();
 
             Console.WriteLine("Enter the Price for the Meal.");
             string priceAsString = Console.ReadLine();
@@ -150,7 +150,7 @@ namespace KomodoCafe_Console
             newItem.MealDescription = Console.ReadLine();
 
             Console.WriteLine("Enter the List of Ingredients.");
-            newItem.MealDescription = Console.ReadLine();
+            newItem.ListOfIngredients = Console.ReadLine();
 
             Console.WriteLine("Enter the Price for the Meal.");
             string priceAsString = Console.ReadLine();

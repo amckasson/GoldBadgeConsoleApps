@@ -90,7 +90,15 @@ namespace _02_KomodoBadges_Console
 
         private void ListAllBadges()
         {
+            Console.Clear();
+            Dictionary<int, string> badgeDictionary = _badgeRepo.GetBadges();
+           foreach (KomodoBadges badge in badgeDictionary)
+            {
+                Console.WriteLine($"Badge ID: {badge.BadgeID}\n" +
+                    $"Doors Allowed: {badge.ListOfDoors}");
+            }
 
+            
         }
     }
 }
