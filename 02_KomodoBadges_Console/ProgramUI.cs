@@ -64,13 +64,14 @@ namespace _02_KomodoBadges_Console
             string badgeIDAsString = Console.ReadLine();
             newBadge.BadgeID = int.Parse(badgeIDAsString);
 
-            Console.WriteLine("List a door that it needs access to: ");
-            newBadge.ListOfDoors = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("Enter a door that Employee has access to : ");
+            string doorAccessAsString = Console.ReadLine();
+            newBadge.ListOfDoors = doorAccessAsString;
             Console.WriteLine("Any other doors (y/n)?");
             string ifYes = (Console.ReadLine());
             while (ifYes == "y")
             {
-                Console.WriteLine("List another door: ");
+                Console.WriteLine("Enter another door: ");
                 newBadge.ListOfDoors = Console.ReadLine();
                 Console.WriteLine("Any other doors (y/n)?");
                 string ifNo = Console.ReadLine();
