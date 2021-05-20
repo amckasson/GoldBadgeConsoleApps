@@ -25,5 +25,33 @@ namespace _02_KomodoBadges_Repository
                 //return badge
            // }
         //}
+        public Dictionary<int, string> GetBadges()
+        {
+            return _KomodoBadges;
+        }
+
+        public void UpdateExistingBadge(int originalID, string doorList)
+        {
+            KomodoBadges oldBadge = GetBadges(int , string)
+        }
+
+
+
+
+        //private KomodoBadges GetBadgeByID(int, string badgeID)
+        //{
+        //    foreach(KeyValuePair<int, string> badge in _KomodoBadges)
+        //    {
+        //        if (badge.Key == badgeID)
+        //        {
+        //           return badge.Key badge.Value;
+        //        }
+        //    }
+        //}
+        // Testing this push
+        public void Worried()
+        {
+            Console.WriteLine("Whats going on?");
+        }
     }
 }
