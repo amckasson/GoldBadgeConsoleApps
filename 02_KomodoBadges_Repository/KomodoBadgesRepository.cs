@@ -23,9 +23,10 @@ namespace _02_KomodoBadges_Repository
         }
 
         //Update
-        public void UpdateExistingBadge(int originalID, KomodoBadges doorList)
+        public bool UpdateExistingBadge(int originalID, KomodoBadges doorList)
         {
-           
+            KomodoBadges oldBadge = GetBadges(originalBadge);
+            _KomodoBadges.
         }
 
     }

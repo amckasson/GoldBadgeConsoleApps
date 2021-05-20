@@ -59,20 +59,20 @@ namespace _02_KomodoBadges_Console
         private void AddBadge()
         {
             KomodoBadges newBadge = new KomodoBadges();
+            newBadge.ListOfDoors = new List<string>();
 
             Console.WriteLine("Enter the badge ID number: ");
             string badgeIDAsString = Console.ReadLine();
             newBadge.BadgeID = int.Parse(badgeIDAsString);
 
             Console.WriteLine("Enter a door that Employee has access to : ");
-            string doorAccessAsString = Console.ReadLine();
-            newBadge.ListOfDoors = doorAccessAsString;
+            newBadge.ListOfDoors.Add(Console.ReadLine());
             Console.WriteLine("Any other doors (y/n)?");
             string ifYes = (Console.ReadLine());
             while (ifYes == "y")
             {
                 Console.WriteLine("Enter another door: ");
-                newBadge.ListOfDoors = Console.ReadLine();
+                newBadge.ListOfDoors.Add(Console.ReadLine());
                 Console.WriteLine("Any other doors (y/n)?");
                 string ifNo = Console.ReadLine();
                 if (ifNo == "n")
@@ -81,12 +81,24 @@ namespace _02_KomodoBadges_Console
                     Menu();
                 }
             }
-            _badgeRepo.AddBadgeToDictionary(newBadge);
+            bool wasAddedCorrectly = _badgeRepo.AddBadgeToDictionary(newBadge.BadgeID, newBadge.ListOfDoors);
+            if (wasAddedCorrectly)
+            {
+                Console.WriteLine("Your badge was added correctly!!");
+            }
+            else
+            {
+                Console.WriteLine("Failed to add your badge.");
+            }
         }
 
         private void UpdateBadge()
         {
-            //Dictionary<int, string> badgeInDictionary = _badgeRepo.GetBadges();
+            Console.Clear();
+            ListAllBadges();
+            Console.WriteLine("Enter the badge ID number that you want to update: ");
+            string oldBadgeInfo = Console.ReadLine();
+            //Dictionary<int, KomodoBadges> badgeInDictionary = _badgeRepo.GetBadges();
         }
 
         private void ListAllBadges()
@@ -98,7 +110,8 @@ namespace _02_KomodoBadges_Console
                 Console.WriteLine(entry.Key + ":" + entry.Value);
             }
 
-
+            
         }
+        
     }
 }
