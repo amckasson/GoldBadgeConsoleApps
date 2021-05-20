@@ -12,6 +12,7 @@ namespace _02_KomodoBadges_Console
         private KomodoBadgesRepository _badgeRepo = new KomodoBadgesRepository();
         public void Run()
         {
+            SeedData();
             Menu();
         }
 
@@ -96,11 +97,62 @@ namespace _02_KomodoBadges_Console
         private void UpdateBadge()
         {
             Console.Clear();
-            ListAllBadges();
+            List<string> doorAccess = new List<string>();
+            Dictionary<int, List<string>> badgeRepo = _badgeRepo.GetBadges();
             Console.WriteLine("Enter the badge ID number that you want to update: ");
-            string oldBadgeInfo = Console.ReadLine();
-            //Dictionary<int, KomodoBadges> badgeInDictionary = _badgeRepo.GetBadges();
+            int badgeToUpdate = Convert.ToInt32(Console.ReadLine());
+
+            if (badgeRepo.ContainsKey(badgeToUpdate))
+            {
+                Console.WriteLine($"Would you like to add or a remove a door to {badgeToUpdate}?\n" +
+                    "1. Add Door\n" +
+                    "2. Remove Door");
+                int input = Convert.ToInt32(Console.ReadLine());
+                bool isRunning;
+                if (input == 1)
+                {
+                    isRunning = true;
+                    while (isRunning)
+                    {
+                        Console.WriteLine("Add a door name: ");
+                        string newDoor = Console.ReadLine();
+                        doorAccess.Add(newDoor);
+                        badgeRepo.Add(badgeToUpdate, new List<string> { newDoor });
+                        Console.Write("Add new door?");
+                        string userInput = Console.ReadLine();
+                        if (userInput.ToLower() == "n" || userInput.ToLower() == "no")
+                        {
+                            isRunning = false;
+                        }
+
+
+                    }
+                }
+
+
+            }
+
+            switch (input)
+            {
+                case 1:
+                    _badgeRepo.AddDoorToBadge();
+                    break;
+
+                default:
+                    break;
+            }
+
+            if (input == "Add Door")
+            {
+                Console.WriteLine($"What door would you like to add to {badgeToUpdate}: ");
+                //int doorToAdd = Console.ReadLine()
+
+            }
+
+
+
         }
+
 
         private void ListAllBadges()
         {
@@ -108,11 +160,20 @@ namespace _02_KomodoBadges_Console
             Dictionary<int, List<string>> badgeDictionary = _badgeRepo.GetBadges();
             foreach (KeyValuePair<int, List<string>> entry in badgeDictionary)
             {
-                Console.WriteLine(entry.Key + ":" + entry.Value);
+                Console.WriteLine(entry.Key + ":");
+                foreach (string room in entry.Value)
+                {
+                    Console.Write($" {room}\n");
+                }
             }
 
-            
+
         }
-        
+
+        private void SeedData()
+        {
+            _badgeRepo.AddBadgeToDictionary(227, new List<string> { "23", "24", "25" });
+        }
+
     }
 }

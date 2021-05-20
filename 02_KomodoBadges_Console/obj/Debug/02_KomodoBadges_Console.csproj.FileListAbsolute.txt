@@ -8,3 +8,13 @@ C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldB
 C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\02_KomodoBadges_Console\obj\Debug\02_KomodoBadges_Console.csproj.CopyComplete
 C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\02_KomodoBadges_Console\obj\Debug\02_KomodoBadges_Console.exe
 C:\Users\GallantHeroDrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\02_KomodoBadges_Console\obj\Debug\02_KomodoBadges_Console.pdb
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\02_KomodoBadges_Console\bin\Debug\02_KomodoBadges_Console.exe.config
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\02_KomodoBadges_Console\bin\Debug\02_KomodoBadges_Console.exe
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\02_KomodoBadges_Console\bin\Debug\02_KomodoBadges_Console.pdb
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\02_KomodoBadges_Console\bin\Debug\02_KomodoBadges_Repository.dll
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\02_KomodoBadges_Console\bin\Debug\02_KomodoBadges_Repository.pdb
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\02_KomodoBadges_Console\obj\Debug\02_KomodoBadges_Console.csprojAssemblyReference.cache
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\02_KomodoBadges_Console\obj\Debug\02_KomodoBadges_Console.csproj.CoreCompileInputs.cache
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\02_KomodoBadges_Console\obj\Debug\02_KomodoBadges_Console.csproj.CopyComplete
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\02_KomodoBadges_Console\obj\Debug\02_KomodoBadges_Console.exe
+C:\Users\Andrew\Desktop\ElevenFiftyProjects\GoldBadge\Assignments\GoldBadgeConsoleApps\02_KomodoBadges_Console\obj\Debug\02_KomodoBadges_Console.pdb
