@@ -96,64 +96,19 @@ namespace _02_KomodoBadges_Console
 
         private void UpdateBadge()
         {
+            KomodoBadges badges = new KomodoBadges();
+            badges.ListOfDoors = new List<string>();
             Console.Clear();
-            List<string> doorAccess = new List<string>();
-            Dictionary<int, List<string>> badgeRepo = _badgeRepo.GetBadges();
             Console.WriteLine("Enter the badge ID number that you want to update: ");
-            int badgeToUpdate = Convert.ToInt32(Console.ReadLine());
-
-            if (badgeRepo.ContainsKey(badgeToUpdate))
-            {
-                Console.WriteLine($"Would you like to add or a remove a door to {badgeToUpdate}?\n" +
-                    "1. Add Door\n" +
-                    "2. Remove Door");
-                int input = Convert.ToInt32(Console.ReadLine());
-                bool isRunning;
-                if (input == 1)
-                {
-                    isRunning = true;
-                    while (isRunning)
-                    {
-                        Console.WriteLine("Add a door name: ");
-                        string newDoor = Console.ReadLine();
-                        doorAccess.Add(newDoor);
-                        badgeRepo.Add(badgeToUpdate, new List<string> { newDoor });
-                        Console.Write("Add new door?");
-                        string userInput = Console.ReadLine();
-                        if (userInput.ToLower() == "n" || userInput.ToLower() == "no")
-                        {
-                            isRunning = false;
-                        }
-
-
-                    }
-                }
-
+            badges.BadgeID = int.Parse(Console.ReadLine());
+            bool AddedBadge = _badgeRepo.AddBadgeToDictionary(badges.BadgeID, )
 
             }
 
-            switch (input)
-            {
-                case 1:
-                    _badgeRepo.AddDoorToBadge();
-                    break;
-
-                default:
-                    break;
-            }
-
-            if (input == "Add Door")
-            {
-                Console.WriteLine($"What door would you like to add to {badgeToUpdate}: ");
-                //int doorToAdd = Console.ReadLine()
-
-            }
-
-
+        public void DoorToEdit(int badgeID)
+        {
 
         }
-
-
         private void ListAllBadges()
         {
             Console.Clear();
