@@ -98,17 +98,40 @@ namespace _02_KomodoBadges_Console
         {
             KomodoBadges badges = new KomodoBadges();
             badges.ListOfDoors = new List<string>();
+            //badges.BadgeID = new int();
             Console.Clear();
             Console.WriteLine("Enter the badge ID number that you want to update: ");
             badges.BadgeID = int.Parse(Console.ReadLine());
-            bool AddedBadge = _badgeRepo.AddBadgeToDictionary(badges.BadgeID, )
-
+            Console.WriteLine("Do you want to add a door or remove a door?\n" +
+                "1. add\n" +
+                "2. remove");
+            string input = Console.ReadLine();
+            if (input == "add")
+            {
+                Console.WriteLine("Whats the door that you would like to add?");
+                string door = Console.ReadLine();
+                _badgeRepo.AddDoorToBadge(badges.BadgeID, door);
             }
+            bool addedBadge = _badgeRepo.AddBadgeToDictionary(badges.BadgeID, badges.ListOfDoors);
 
-        public void DoorToEdit(int badgeID)
-        {
+            if (addedBadge == true)
+            {
+                Console.WriteLine("Door added successfully.");
+            }
+            else
+            {
+                Console.WriteLine("Door could not be added.");
+            }
+            if (input == "remove")
+            {
+                Console.WriteLine("Whats the door that you would like to remove?");
+                string doorRemove = Console.ReadLine();
+                _badgeRepo.RemoveDoorFromBadge(badges.BadgeID, doorRemove);
+            }
+            //bool removedBadge = _badgeRepo.RemoveDoorFromBadge(badges.BadgeID, badges.ListOfDoors);
 
         }
+
         private void ListAllBadges()
         {
             Console.Clear();
@@ -121,8 +144,6 @@ namespace _02_KomodoBadges_Console
                     Console.Write($" {room}\n");
                 }
             }
-
-
         }
 
         private void SeedData()
